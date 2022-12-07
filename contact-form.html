@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- DEVELOPER Shaydul Islam, IS117-001, Fall 2022 -->
+
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Karma", sans-serif
+        }
+
+        .ind-bar-block .ind-bar-item {
+            padding: 20px
+        }
+
+        body {
+            background-image: url("contact_us.jpg");
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top menu -->
+    <div class="ind-top">
+        <div class="ind-white ind-xlarge" style="max-width:1200px;margin:auto">
+            <div class="ind-right ind-padding-16">
+                <a href="contact-form.html" onclick="ind_close()" class="ind-bar-item ind-button">Contact</a>
+            </div>
+            <div class="ind-center ind-padding-16">
+                <a href="index.html" onclick="ind_close()" class="ind-bar-item ind-button">My Food</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column col-auto col-mx-auto">
+                <div class="form-group">
+                    <form target="_self" id="bootstrapForm" method="POST">
+                        <fieldset>
+                            <h2>Contact Form<br><small>Required</small></h2>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="610609209">First Name</legend>
+                            <div class="form-group">
+                                <input id="1248082634" type="text" name="entry.1248082634" class="form-control"
+                                    required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="1214740323">Last Name</legend>
+                            <div class="form-group">
+                                <input id="537543589" type="text" name="entry.537543589" class="form-control" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="974221809">Phone Number</legend>
+                            <div class="form-group">
+                                <input id="1896829488" type="text" name="entry.1896829488" class="form-control"
+                                    required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="238925373">Email</legend>
+                            <div class="form-group">
+                                <input id="950221048" type="text" name="entry.950221048" class="form-control" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="1047002267">Address</legend>
+                            <div class="form-group">
+                                <textarea id="138512886" name="entry.138512886" class="form-control"
+                                    required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="631056689">Preferred Contact</legend>
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="entry.981370794" value="Email" required>
+                                        Email
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="entry.981370794" value="Phone" required>
+                                        Phone
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend for="1171934047">Your massage</legend>
+                            <div class="form-group">
+                                <textarea id="1895304209" name="entry.1895304209" class="form-control"
+                                    required></textarea>
+                            </div>
+                        </fieldset>
+                        <input type="hidden" name="fvv" value="1">
+                        <input type="hidden" name="fbzx" value="8081235427209087729">
+
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script>
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault()
+            var extraData = {}
+            $('#bootstrapForm').ajaxSubmit({
+                data: extraData,
+                dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+                error: function () {
+                    // Submit of form should be successful but JSONP callback will fail because Google Forms
+                    // does not support it, so this is handled as a failure.
+                    alert('Form Submitted. Thanks.')
+                    // You can also redirect the user to a custom thank-you page:
+                    // window.location = 'http://www.mydomain.com/thankyoupage.html'
+                }
+            })
+        })
+    </script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"775966fbbd1a8cb9","token":"5dac2d8f3d14427aab9e85de0419fad9","version":"2022.11.3","si":100}'
+        crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; Copyright 2022 Shaydul Corporation</p>
+    </div>
+</body>
+
+</html>

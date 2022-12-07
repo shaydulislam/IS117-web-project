@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- DEVELOPER Shaydul Islam, IS117-001, Fall 2022 -->
+    <title>Cake Recipes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Karma", sans-serif
+        }
+
+        .ind-bar-block .ind-bar-item {
+            padding: 20px
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar (hidden by default) -->
+    <nav class="ind-sidebar ind-bar-block ind-card ind-top ind-xlarge ind-animate-left"
+        style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+        <a href="#food" onclick="ind_close()" class="ind-bar-item ind-button">Home</a>
+        <a href="#about" onclick="ind_close()" class="ind-bar-item ind-button">About</a>
+        <a href="favorite.html" onclick="ind_close()" class="ind-bar-item ind-button">Favorites</a>
+
+    </nav>
+
+    <!-- Top menu -->
+    <div class="ind-top">
+        <div class="ind-white ind-xlarge" style="max-width:1200px;margin:auto">
+            <div class="ind-button ind-padding-16 ind-left" onclick="ind_open()">☰</div>
+            <div class="ind-right ind-padding-16">
+                <a href="contact-form.html" onclick="ind_close()" class="ind-bar-item ind-button">Contact</a>
+            </div>
+            <div class="ind-center ind-padding-16">My Food</div>
+        </div>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="ind-main ind-content ind-padding" style="max-width:1200px;margin-top:100px">
+
+        <!-- First Photo Grid-->
+        <div class="ind-row-padding ind-padding-16 ind-center" id="food">
+            <div class="ind-quarter">
+                <img src="Black-Forest-Cake.jpg" alt="black-forest" style="width:100%">
+                <h3>Black Forest Cake</h3>
+                <p>We’re starting this fabulous cake list with a classic, everybody’s favorite Black Forest Cake. Super
+                    moist and flavorful with a deep chocolate flavor, the cake is layered with cherry filling and topped
+                    with homemade whipped cream. Absolutely decadent!</p>
+            </div>
+            <div class="ind-quarter">
+                <img src="Pineapple-Upside-Down-Cake.jpg" alt="pine" style="width:100%">
+                <h3>Pineapple Upside Down Cake</h3>
+                <p>Another classic is this Pineapple Upside Down Cake. You’re going to love the tropical flavor of
+                    pineapple combined with the sweet caramelized edges. Just imagine how happy you would be when this
+                    cake greets you upside down! </p>
+            </div>
+            <div class="ind-quarter">
+                <img src="carrot-cake.jpg" alt="carrot" style="width:100%">
+                <h3>Carrot Cake</h3>
+                <p>All the BEST things are there inside this carrot cake. It’s tender and melt in your mouth with moist
+                    crumbs. It has the perfect level of sweetness with plenty of finely shredded carrots. And, of
+                    course, it’s finished with a decadent frosting. Cream cheese frosting is the only way to go here!
+                </p>
+            </div>
+            <div class="ind-quarter">
+                <img src="strawberry-cake.jpg" alt="strawberry" style="width:100%">
+                <h3>Strawberry Shortcake</h3>
+                <p>Strawberry Shortcake: You will love how this is made up of tender and fluffy vanilla cake. It’s
+                    filled with homemade whipped cream and fresh strawberries and covered in a strawberry buttercream.
+                    The perfect shortcake for the season! You’re going to love these easy and awesome flavors. </p>
+            </div>
+        </div>
+
+        <!-- Second Photo Grid-->
+        <div class="ind-row-padding ind-padding-16 ind-center">
+            <div class="ind-quarter">
+                <img src="Berry-Tres-Leches-Cake.jpg" alt="berry" style="width:100%">
+                <h3>Berry Tres Leches Cake </h3>
+                <p>This one is a real treat! This Berry Tres Leches Cake begins with layers of vanilla sponge cake
+                    layers that are soaked with a three-milk mixture. Then it’s layered with a delicate mascarpone
+                    whipped cream frosting and tons of strawberries, blueberries, blackberries and raspberries! This one
+                    is sure to impress! </p>
+            </div>
+            <div class="ind-quarter">
+                <img src="Best-Moist-Chocolate-Cake.jpg" alt="moist-chocolate" style="width:100%">
+                <h3>Chocolate Cake</h3>
+                <p>Everyone needs a great chocolate cake recipe in their arsenal, and this is the absolute best. It’s
+                    made completely from scratch and is super moist and flavorful. Everything is topped off with a
+                    delicious chocolate buttercream frosting. </p>
+            </div>
+            <div class="ind-quarter">
+                <img src="Oreo-Cake.jpg" alt="oreo" style="width:100%">
+                <h3>Oreo Cake</h3>
+                <p>Every kid’s favorite, Cookies and Cream, aka Oreo, cake. You’ll love this white cake studded with
+                    cookie pieces and topped with cookies and cream frosting. Make this for the next birthday party for
+                    your little one and see their smiles when you take this to the table. </p>
+            </div>
+            <div class="ind-quarter">
+                <img src="red-velvet-cake.jpg" alt="velvet-cake" style="width:100%">
+                <h3>Red Velvet Cake</h3>
+                <p>This classic red velvet cake has a moist, fluffy crumb and decadent cream cheese frosting. This
+                    festive cake is great for holidays! </p>
+            </div>
+        </div>
+
+        <hr id="about">
+
+        <!-- About Section -->
+        <div class="ind-container ind-padding-32 ind-center">
+            <h3>About Me</h3><br>
+            <img src="me.jpg" alt="Me" class="ind-image" style="display:block;margin:auto" width="800" height="50">
+            <div class="ind-padding-32">
+                <h4><b>Shaydul Islam</b></h4>
+                <p>I love eating food!</p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; Copyright 2022 Shaydul Corporation</p>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function ind_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function ind_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

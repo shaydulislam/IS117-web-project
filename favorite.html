@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- DEVELOPER Shaydul Islam, IS117-001, Fall 2022 -->
+    <title>Cake Recipes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Karma", sans-serif
+        }
+
+        .ind-bar-block .ind-bar-item {
+            padding: 20px
+        }
+
+        body {
+            background-image: url("fav.jpg");
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar (hidden by default) -->
+    <nav class="ind-sidebar ind-bar-block ind-card ind-top ind-xlarge ind-animate-left"
+        style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+        <a href="index.html" onclick="ind_close()" class="ind-bar-item ind-button">Home</a>
+        <a href="index.html" onclick="ind_close()" class="ind-bar-item ind-button">About</a>
+        <a href="favorite.html" onclick="ind_close()" class="ind-bar-item ind-button">Favorites</a>
+
+    </nav>
+
+    <!-- Top menu -->
+    <div class="ind-top">
+        <div class="ind-white ind-xlarge" style="max-width:1200px;margin:auto">
+            <div class="ind-button ind-padding-16 ind-left" onclick="ind_open()">☰</div>
+            <div class="ind-right ind-padding-16">
+                <a href="contact-form.html" onclick="ind_close()" class="ind-bar-item ind-button">Contact</a>
+            </div>
+            <div class="ind-center ind-padding-16">My Food</div>
+        </div>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="ind-main ind-content ind-padding" style="max-width:1200px;margin-top:100px">
+
+        <h3 style="text-align: center">Favorites</h3>
+        <!-- First Photo Grid-->
+        <div style="margin: auto; width: 50%;
+        padding: 10px;">
+            <div style="margin: auto; width: 50%;
+            padding: 10px;">
+                <img src="Black-Forest-Cake.jpg" alt="black-forest"
+                    style="width: 300px; height: 250px; text-align: center;">
+                <h3>Black Forest Cake</h3>
+                <p>We’re starting this fabulous cake list with a classic, everybody’s favorite Black Forest Cake. Super
+                    moist and flavorful with a deep chocolate flavor, the cake is layered with cherry filling and topped
+                    with homemade whipped cream. Absolutely decadent!</p>
+            </div>
+            <div style="margin: auto; width: 50%;
+        padding: 10px;">
+                <img src="carrot-cake.jpg" alt="carrot" style="width: 200px; height: 250px;">
+                <h3>Carrot Cake</h3>
+                <p>All the BEST things are there inside this carrot cake. It’s tender and melt in your mouth with moist
+                    crumbs. It has the perfect level of sweetness with plenty of finely shredded carrots. And, of
+                    course, it’s finished with a decadent frosting. Cream cheese frosting is the only way to go here!
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; Copyright 2022 Shaydul Corporation</p>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function ind_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function ind_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
